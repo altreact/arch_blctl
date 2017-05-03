@@ -28,6 +28,6 @@ fi' > /usr/local/bin/b
 chmod +x /usr/local/bin/b
 
 echo
-echo 'b u "brightness up'
-echo 'b d "brightness down'
+echo 'b u "brightness up"'
+echo 'b d "brightness down"'
 echo

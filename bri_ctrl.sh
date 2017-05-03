@@ -1,4 +1,4 @@
-#!/bin/bash
+#!usr/bin/env bash
 
 if [ "$(whoami)" != 'root' ]; then
   echo
@@ -9,10 +9,11 @@ fi
 
 echo 'f /sys/class/backlight/backlight.12/brightness 0666 - - - 800' > /etc/tmpfiles.d/brightness.conf
 
-echo 'usr/bin/env bash
+echo '#!/usr/bin/env bash
 
-b="/sys/class/backlight/backlight.12/brightness"
-mb="/sys/class/backlight/backlight.12/max_brightness"
+b="$(find /sys/class/backlight/*/ -name brightness -type f)"
+mb="$(find /sys/class/backlight/*/ -name max_brightness -type f)"
+
 cur_bri="$(cat $b)"
 maxb="$(cat $mb)" 
 incr=100

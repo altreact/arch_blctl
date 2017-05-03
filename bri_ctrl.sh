@@ -21,9 +21,18 @@ step=100
 if [ $1 = 'u' ] && [ `expr $cur_bri + $step` -le $maxb ]; then
     echo `expr $cur_bri + $step` > $b
 fi
+
 if [ $1 = 'd' ] && [ `expr $cur_bri - $step` -ge 0 ]; then
     echo `expr $cur_bri - $step` > $b
-fi' > /usr/local/bin/b
+fi
+
+if [ $1 = 'step' ]; then
+    cs="$(cat /usr/local/bin/b | grep step= | head -n1)"
+    sections="$(($maxb/$2))"
+    sed -i "s/$cs/step=$sections/" /usr/local/bin/b 
+fi
+
+' > /usr/local/bin/b
 
 chmod +x /usr/local/bin/b
 

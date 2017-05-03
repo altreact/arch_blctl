@@ -39,4 +39,5 @@ chmod +x /usr/local/bin/b
 echo
 echo 'b u "brightness up"'
 echo 'b d "brightness down"'
+echo 'b step [num] "gives you [num] steps between minimum and maximum brightness"'
 echo

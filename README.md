@@ -8,7 +8,9 @@ replace $incr's value with the number of steps you'd like the script to alter yo
 
 "sudo sh bri_ctrl.sh"
  
+ 
 "b u" to increase backlight brightness
+
 "b d" to decrease backlight brightness
  
 the commands above can then be mapped to keys on your keyboard

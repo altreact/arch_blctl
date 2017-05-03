@@ -1,4 +1,4 @@
-#arch_blctl
+# arch_blctl
  
 
 "sudo sh bri_ctrl.sh"

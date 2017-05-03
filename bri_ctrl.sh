@@ -26,12 +26,3 @@ if [ $1 = 'd' ] && [ `expr $cur_bri - $step` -ge 0 ]; then
 fi' > /usr/local/bin/b
 
 chmod +x /usr/local/bin/b
-
-echo
-echo 'system must be rebooted for changes to take effect'
-echo
-read -p 'reboot now? [N/y]: ' a
-
-if [ $a = 'y' ]; then
-  reboot
-fi

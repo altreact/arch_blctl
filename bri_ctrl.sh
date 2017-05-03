@@ -16,13 +16,13 @@ mb="$(find /sys/class/backlight/*/ -name max_brightness -type f)"
 
 cur_bri="$(cat $b)"
 maxb="$(cat $mb)" 
-incr=100
+step=100
 
-if [ $1 = 'u' ] && [ `expr $cur_bri + $incr` -le $maxb ]; then
-    echo `expr $cur_bri + $incr` > $b
+if [ $1 = 'u' ] && [ `expr $cur_bri + $step` -le $maxb ]; then
+    echo `expr $cur_bri + $step` > $b
 fi
-if [ $1 = 'd' ] && [ `expr $cur_bri - $incr` -ge 0 ]; then
-    echo `expr $cur_bri - $incr` > $b
+if [ $1 = 'd' ] && [ `expr $cur_bri - $step` -ge 0 ]; then
+    echo `expr $cur_bri - $step` > $b
 fi' > /usr/local/bin/b
 
 chmod +x /usr/local/bin/b

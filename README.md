@@ -1,6 +1,6 @@
 #arch_blctl
  
-replace $incr's value with the number of steps you'd like the script to alter your brightness level, each time the script is ran
+$step == ammount by which brightness is increased or decreased. change this value to your liking, if desired.
 
 "sudo sh bri_ctrl.sh"
  

@@ -1,5 +1,6 @@
-# arch_blctl
- 
+# linux_gnu-blctl
+
+tested and confirmed to work in arch linux and ubuntu
 
 "sudo sh bri_ctrl.sh"
  
